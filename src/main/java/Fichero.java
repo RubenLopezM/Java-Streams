@@ -19,7 +19,6 @@ public class Fichero {
             String poblacion;
             int edad;
 
-
             while (linea!= null) {
                 linea=mibuffer.readLine();
                 if (linea!=null){
@@ -32,7 +31,6 @@ public class Fichero {
                         Optional <String> optPoblacion = Optional.ofNullable(poblacion);
                         Optional <Integer> optEdad = Optional.ofNullable(edad);
 
-
                         if (optPoblacion.get() == "")
                             poblacion = "Desconocida";
 
@@ -40,7 +38,6 @@ public class Fichero {
                             Persona persona = new Persona(nombre, poblacion, edad);
                             personas.add(persona);
                         }
-
                     } catch (ArrayIndexOutOfBoundsException e) {
                         continue;
                     }
@@ -53,7 +50,6 @@ public class Fichero {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 }
 
